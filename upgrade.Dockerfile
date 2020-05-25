@@ -18,7 +18,7 @@ FROM amd64/debian:buster
 COPY --from=base / /
 
 # Start up APy
-USER 1002:1002
+USER 1006:1006
 EXPOSE 2737
 WORKDIR /home/apertium/ 
 CMD ./run-apy.sh
