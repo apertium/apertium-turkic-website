@@ -2,7 +2,7 @@ import { Config, Mode } from './src/types';
 
 export default {
   defaultLocale: 'eng',
-  htmlUrl: 'https://beta.apertium.org/',
+  htmlUrl: 'https://urum.apertium.org/',
   apyURL: 'https://urum.apertium.org/apy/',
   //apyURL: 'http://localhost:2737',
 
