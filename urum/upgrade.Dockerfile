@@ -1,5 +1,5 @@
 # docker build --no-cache -t apertium-turkic
-FROM apertium-urum AS base
+FROM apertium-uum AS base
 
 #ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
 
