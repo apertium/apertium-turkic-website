@@ -8,13 +8,13 @@ readonly here="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 readonly public_html=/home/turkic/public_html_uum
 
 # Docker image
-#df -h /var/lib/docker
-#time ./upgrade.sh
-#docker stop apertium-uum
-#docker rm apertium-uum
-#./start.sh
-#docker system prune -f
-#df -h /var/lib/docker
+df -h /var/lib/docker
+time ./upgrade.sh
+docker stop apertium-uum
+docker rm apertium-uum
+./start.sh
+docker system prune -f
+df -h /var/lib/docker
 
 # Website
 cd ~turkic/apertium-html-tools-urum
