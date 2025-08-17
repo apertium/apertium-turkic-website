@@ -3,7 +3,7 @@ import { Config, Mode } from './src/types';
 export default {
   defaultLocale: 'eng',
   htmlUrl: 'https://urum.apertium.org/',
-  apyURL: 'https://urum.apertium.org/apy/',
+  apyURL: 'https://urum.apertium.org/apy',
   //apyURL: 'http://localhost:2737',
 
   defaultMode: Mode.Dictionary,

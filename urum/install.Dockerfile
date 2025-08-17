@@ -11,7 +11,7 @@ RUN chown 1006:1006 /home/apertium
 RUN apt-get -qy update && apt-get -qfy --no-install-recommends install apt-utils
 RUN apt-get -qy update && apt-get -qfy --no-install-recommends dist-upgrade
 RUN apt-get -qy update && apt-get -qfy --no-install-recommends install wget ca-certificates
-RUN apt-get -qy update && apt-get -qfy --no-install-recommends install file unzip zip python3-chardet python3-requests python3-lxml python3-streamparser apertium-apy transfuse gawk python3-fasttext
+RUN apt-get -qy update && apt-get -qfy --no-install-recommends install file unzip zip python3-chardet python3-requests python3-lxml python3-streamparser transfuse gawk python3-fasttext
 RUN wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | bash
-RUN apt-get -qy update && apt-get -qfy --no-install-recommends install apertium-all-dev
+RUN apt-get -qy update && apt-get -qfy --no-install-recommends install apertium-all-dev apertium-get curl autoconf automake
 RUN apt-get -qy update && apt-get -qfy --no-install-recommends install file unzip zip

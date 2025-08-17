@@ -12,10 +12,16 @@ USER root
 # Copy in APy startup script
 ADD run-apy.sh /home/apertium/run-apy.sh
 
-RUN apt-get -qy update && apt-get -qfy --no-install-recommends dist-upgrade && apt-get -qfy -o Dpkg::Options::="--force-overwrite" install --no-install-recommends python3-tornado apertium-apy apertium-uum apertium-ukr apertium-eng apertium-rus apertium-uum-eng apertium-rus-ukr apertium-uum-ukr  && apt-get -qfy autoremove --purge  #  apertium-rus-eng  apertium-uum-ukr
+RUN apt-get -qy update && apt-get -qfy --no-install-recommends dist-upgrade && apt-get -qfy -o Dpkg::Options::="--force-overwrite" install --no-install-recommends python3-tornado  && apt-get -qfy autoremove --purge  #  apertium-rus-eng  apertium-uum-ukr  apertium-uum apertium-ukr apertium-eng apertium-rus apertium-uum-eng apertium-rus-ukr apertium-uum-ukr apertium-apy 
+
+RUN chown -R root:root *
+RUN apertium-get uum-eng rus-ukr uum-ukr # rus-eng
+RUN chown -R apertium:apertium *
 
 RUN rm -rf /opt/apertium-apy
 RUN git clone https://github.com/apertium/apertium-apy.git -b embeddings /opt/apertium-apy
+WORKDIR /opt/apertium-apy
+RUN make
 
 FROM amd64/debian:bookworm
 COPY --from=base / /

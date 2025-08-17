@@ -9,4 +9,5 @@ LANG='en_US.UTF-8' python3 /opt/apertium-apy/apy.py \
                            -r1000 \
                            -d \
                            -P /home/apertium/logs/ \
-                           /usr/share/apertium/
+                           -l /opt/apertium-apy/langNames.db \
+                           /home/apertium
